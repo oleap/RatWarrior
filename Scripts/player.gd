@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @export_category("Player Properties") # You can tweak these changes according to your likings
 @export var move_speed : float = 400
-@export var jump_force : float = 6000
+@export var jump_force : float = 600
 @export var gravity : float = 30
 @export var max_jump_count : int = 2
 var jump_count : int = 2
@@ -87,6 +87,7 @@ func death_tween():
 	global_position = spawn_point.global_position
 	await get_tree().create_timer(0.3).timeout
 	AudioManager.respawn_sfx.play()
+	GameManager.add_score()
 	respawn_tween()
 
 func respawn_tween():

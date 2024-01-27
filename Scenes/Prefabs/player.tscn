@@ -104,7 +104,6 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 safe_margin = 0.8
 script = ExtResource("1_qt7d6")
-jump_force = 600.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 1)
