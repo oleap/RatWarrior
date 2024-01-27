@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjb3dx2x4bocm"]
+[gd_scene load_steps=14 format=3 uid="uid://bjb3dx2x4bocm"]
 
+[ext_resource type="Script" path="res://Scripts/Levels/Level_02.gd" id="1_vjpva"]
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://Scenes/Prefabs/player.tscn" id="2_lpo2y"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/Coin.tscn" id="3_nht2m"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="4_ndpt4"]
@@ -7,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/GameUI.gd" id="6_um0jo"]
 [ext_resource type="Texture2D" uid="uid://clreg520jah1j" path="res://Assets/platformPack_item008.png" id="7_ns8o6"]
 [ext_resource type="FontFile" uid="uid://qgc4vi5osk7v" path="res://Assets/Fonts/Star Choco.ttf" id="8_doswy"]
+[ext_resource type="PackedScene" uid="uid://weanydrknfxv" path="res://Scenes/Menu/pause.tscn" id="9_t7r6u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_8107p")
@@ -55,6 +57,9 @@ texture_region_size = Vector2i(64, 64)
 0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:5/0/physics_layer_0/angular_velocity = 0.0
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0, 32, 32, -32, 32)
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_2fcbi"]
 tile_size = Vector2i(64, 64)
@@ -62,6 +67,8 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rndpx")
 
 [node name="Level_02" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_vjpva")
 
 [node name="Player" parent="." instance=ExtResource("2_lpo2y")]
 z_index = 1
@@ -107,13 +114,14 @@ layer_0/tile_data = PackedInt32Array(458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 4
 [node name="Traps" type="TileMap" parent="Level" groups=["Traps"]]
 tile_set = SubResource("TileSet_2fcbi")
 format = 2
-layer_0/tile_data = PackedInt32Array(524298, 0, 5, 524299, 0, 5, 524300, 0, 5, 524301, 0, 5, 524302, 0, 5, 524303, 0, 5, 524304, 0, 5)
+layer_0/tile_data = PackedInt32Array(524300, 0, 5, 524301, 0, 5, 524302, 0, 5, 524303, 0, 5, 524304, 0, 5, 524298, 0, 5, 524299, 0, 5)
 
 [node name="SpawnPoint" type="Marker2D" parent="Level"]
 unique_name_in_owner = true
 position = Vector2(232, 328)
 
 [node name="TutorialText" type="Node2D" parent="."]
+visible = false
 
 [node name="Credits" type="Label" parent="TutorialText"]
 offset_left = 1416.0
@@ -131,6 +139,7 @@ G2P STUDIOS"
 horizontal_alignment = 1
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="GameUI" type="Control" parent="UserInterface"]
 layout_mode = 3
@@ -171,3 +180,6 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("8_doswy")
 theme_override_font_sizes/font_size = 32
 text = "x 3"
+
+[node name="Pause" parent="UserInterface" instance=ExtResource("9_t7r6u")]
+visible = false

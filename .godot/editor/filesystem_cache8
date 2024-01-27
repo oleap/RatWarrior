@@ -1,0 +1,51 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1706381982
+default_env.tres::Environment::3168362695892368327::1706373094::0::1::::<><>::
+Icon.png::CompressedTexture2D::1623085831685198535::1706353853::1706381983::1::::<><>::
+icon.svg::CompressedTexture2D::4996655621281321516::1706353853::1706381983::1::::<><>::
+README.md::TextFile::-1::1706353853::0::1::::<><>::
+::res://Assets/::1706381963
+platformPack_item008.png::CompressedTexture2D::5580268270516214921::1706353853::1706381983::1::::<><>::
+platformPack_tile048.png::CompressedTexture2D::5572625094219394687::1706353853::1706381983::1::::<><>::
+::res://Assets/Fonts/::1706353853
+Star Choco.ttf::FontFile::1135582103472931629::1706353853::1706381983::1::::<><>::
+::res://Assets/Sound/::1706353853
+::res://Assets/Sound/FX/::1706381963
+30_Jump_03.wav::AudioStreamWAV::9147479056271028219::1706353853::1706381983::1::::<><>::
+::res://Assets/Splash/::1706381963
+2D Platformer Starter Kit Splash.png::CompressedTexture2D::559863941929811480::1706353853::1706381983::1::::<><>::
+::res://Assets/Spritesheet/::1706381963
+platformerPack_character.png::CompressedTexture2D::4881342531443074800::1706353853::1706381983::1::::<><>::
+platformPack_tilesheet.png::CompressedTexture2D::631954010946117902::1706353853::1706381983::1::::<><>::
+::res://Assets/Textures/::1706381963
+CloudTexture.png::CompressedTexture2D::8806572391911018943::1706353853::1706381983::1::::<><>::
+star_07.png::CompressedTexture2D::2233171978247897944::1706353853::1706381983::1::::<><>::
+::res://Scenes/::1706381934
+::res://Scenes/Levels/::1706381754
+Level_01.tscn::PackedScene::5405370242886089164::1706381633::0::1::::<><>::uid://cyti38f0lagf2::::res://Scenes/Prefabs/LevelFinishDoor.tscn<>res://Scripts/Levels/Level_01.gd<>uid://bjb3dx2x4bocm::::res://Scenes/Levels/Level_02.tscn<>uid://w7m6tehvvy3g::::res://Scenes/Prefabs/player.tscn<>uid://bfmh3fm2de78o::::res://Scenes/Prefabs/Coin.tscn<>res://Scripts/GameManager.gd<>uid://jaegp53ccc7w::::res://Assets/Spritesheet/platformPack_tilesheet.png<>res://Scripts/GameUI.gd<>uid://clreg520jah1j::::res://Assets/platformPack_item008.png<>uid://qgc4vi5osk7v::::res://Assets/Fonts/Star Choco.ttf<>uid://weanydrknfxv::::res://Scenes/Menu/pause.tscn
+Level_02.tscn::PackedScene::3021891338199224576::1706381754::0::1::::<><>::res://Scripts/Levels/Level_02.gd<>uid://w7m6tehvvy3g::::res://Scenes/Prefabs/player.tscn<>uid://bfmh3fm2de78o::::res://Scenes/Prefabs/Coin.tscn<>res://Scripts/GameManager.gd<>uid://jaegp53ccc7w::::res://Assets/Spritesheet/platformPack_tilesheet.png<>res://Scripts/GameUI.gd<>uid://clreg520jah1j::::res://Assets/platformPack_item008.png<>uid://qgc4vi5osk7v::::res://Assets/Fonts/Star Choco.ttf<>uid://weanydrknfxv::::res://Scenes/Menu/pause.tscn
+::res://Scenes/Managers/::1706353853
+AudioManager.tscn::PackedScene::3687542464613950215::1706353853::0::1::::<><>::res://Scripts/AudioManager.gd<>uid://cg4gxy6p2ktlc::::res://Assets/Sound/FX/jump_sfx.sfxr<>uid://vrusmhs8ok45::::res://Assets/Sound/FX/coin_pickup_sfx.sfxr<>uid://btybfha0k0vbf::::res://Assets/Sound/FX/death_sfx.sfxr<>uid://d31yym0r7wh7::::res://Assets/Sound/FX/respawn_sfx.sfxr<>uid://bpwseyvsredie::::res://Assets/Sound/FX/level_complete_sfx.sfxr
+SceneTransition.tscn::PackedScene::4586814363756221592::1706353853::0::1::::<><>::res://Scripts/SceneTransition.gd
+::res://Scenes/Menu/::1706381754
+main_menu.tscn::PackedScene::4962225347016605684::1706381754::0::1::::<><>::res://Scripts/Menu/main_menu.gd
+pause.tscn::PackedScene::1552436552354815007::1706381754::0::1::::<><>::res://Scripts/Menu/pause.gd
+Tutorial.tscn::PackedScene::7321430217574420653::1706361500::0::1::::<><>::
+::res://Scenes/Prefabs/::1706353853
+Coin.tscn::PackedScene::2762612738496047136::1706353853::0::1::::<><>::res://Scripts/Coin.gd<>uid://jaegp53ccc7w::::res://Assets/Spritesheet/platformPack_tilesheet.png<>uid://621as0fwjhum::::res://Assets/Textures/star_07.png
+LevelFinishDoor.tscn::PackedScene::6497134272342753133::1706353853::0::1::::<><>::res://Scripts/LevelFinishDoor.gd<>uid://clnok6h0axegl::::res://Assets/platformPack_tile048.png
+player.tscn::PackedScene::1610999616160710134::1706353853::0::1::::<><>::res://Scripts/player.gd<>uid://cbss87b7xk5lc::::res://Assets/Spritesheet/platformerPack_character.png<>uid://dxp77wq60c2rr::::res://Assets/Textures/CloudTexture.png
+::res://Scripts/::1706381633
+AudioManager.gd::GDScript::-1::1706353853::0::1::::<>Node<>::
+Coin.gd::GDScript::-1::1706353853::0::1::::<>Area2D<>::
+GameManager.gd::GDScript::-1::1706381633::0::1::::<>Node2D<>::
+GameUI.gd::GDScript::-1::1706353853::0::1::::<>Control<>::
+LevelFinishDoor.gd::GDScript::-1::1706353853::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1706381633::0::1::::<>CharacterBody2D<>::
+SceneTransition.gd::GDScript::-1::1706353853::0::1::::<>CanvasLayer<>::
+::res://Scripts/Levels/::1706377101
+Level_01.gd::GDScript::-1::1706376142::0::1::::<>Node2D<>::
+Level_02.gd::GDScript::-1::1706377101::0::1::::<>Node2D<>::
+::res://Scripts/Menu/::1706377661
+main_menu.gd::GDScript::-1::1706362858::0::1::::<>Control<>::
+pause.gd::GDScript::-1::1706377661::0::1::::<>Node<>::

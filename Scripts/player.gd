@@ -10,7 +10,7 @@ extends CharacterBody2D
 var jump_count : int = 2
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
-@export var double_jump : = false
+@export var double_jump : = true
 
 var is_grounded : bool = false
 
