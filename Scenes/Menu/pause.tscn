@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://weanydrknfxv"]
+
+[ext_resource type="Script" path="res://Scripts/Menu/pause.gd" id="1_4ftnm"]
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ftnm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 88.0
+offset_right = 166.0
+offset_bottom = 154.0
+scale = Vector2(2.87712, 2.87712)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Quit to main" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "End level"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit to main" to="." method="_on_quit_to_main_pressed"]
