@@ -1,0 +1,17 @@
+res://Scenes/Levels/Level_01.tscn
+res://Scripts/player.gd
+res://metroidvanian_tileset.tres
+res://Scripts/Menu/main_menu.gd
+res://Scenes/Prefabs/player.tscn
+res://Scenes/Levels/Level1.tscn
+res://Scenes/Menu/main_menu.tscn
+res://Scenes/Reusables/Water.tscn
+res://Scenes/Levels/Level_02.tscn
+res://Scenes/Levels/Level2.tscn
+res://Scenes/Prefabs/LevelFinishDoor.tscn
+res://Scripts/LevelFinishDoor.gd
+res://Scripts/AudioManager.gd
+res://Scenes/Managers/AudioManager.tscn
+res://Scripts/Levels/Level1.gd
+res://Scripts/Levels/Level2.gd
+res://Scenes/Levels/Level.tscn
