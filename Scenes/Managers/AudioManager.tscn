@@ -1,30 +1,77 @@
-[gd_scene load_steps=7 format=3 uid="uid://bssjjygu83iwl"]
+[gd_scene load_steps=17 format=3 uid="uid://bssjjygu83iwl"]
 
 [ext_resource type="Script" path="res://Scripts/AudioManager.gd" id="1_hp1cr"]
-[ext_resource type="AudioStream" uid="uid://cg4gxy6p2ktlc" path="res://Assets/Sound/FX/jump_sfx.sfxr" id="2_xt7p3"]
-[ext_resource type="AudioStream" uid="uid://vrusmhs8ok45" path="res://Assets/Sound/FX/coin_pickup_sfx.sfxr" id="3_31eto"]
-[ext_resource type="AudioStream" uid="uid://btybfha0k0vbf" path="res://Assets/Sound/FX/death_sfx.sfxr" id="4_0v7sa"]
-[ext_resource type="AudioStream" uid="uid://d31yym0r7wh7" path="res://Assets/Sound/FX/respawn_sfx.sfxr" id="5_7ngje"]
-[ext_resource type="AudioStream" uid="uid://bpwseyvsredie" path="res://Assets/Sound/FX/level_complete_sfx.sfxr" id="6_okxva"]
+[ext_resource type="AudioStream" uid="uid://djqc1j0730j0p" path="res://Assets/Sound/FX/whoop1.wav" id="2_g3lta"]
+[ext_resource type="AudioStream" uid="uid://cks0qhrm8tmj5" path="res://Assets/Sound/FX/dies4.wav" id="4_benwl"]
+[ext_resource type="AudioStream" uid="uid://dlcih1k1pf884" path="res://Assets/Sound/FX/music1.mp3" id="5_g3vtf"]
+[ext_resource type="AudioStream" uid="uid://cd7kxoqbujcwa" path="res://Assets/Sound/FX/failure1.wav" id="6_5s01x"]
+[ext_resource type="AudioStream" uid="uid://d3ldv4818s140" path="res://Assets/Sound/FX/30_Jump_03.wav" id="6_okxva"]
+[ext_resource type="AudioStream" uid="uid://meu60ehts1v4" path="res://Assets/Sound/FX/failure2.wav" id="7_s5dvo"]
+[ext_resource type="AudioStream" uid="uid://s2u3epi0ifre" path="res://Assets/Sound/FX/failure3.wav" id="8_hl1my"]
+[ext_resource type="AudioStream" uid="uid://c016jfxpfnlkl" path="res://Assets/Sound/FX/success1.wav" id="9_tjgfw"]
+[ext_resource type="AudioStream" uid="uid://0t6f1a7u0lvc" path="res://Assets/Sound/FX/success2.wav" id="10_u4xnh"]
+[ext_resource type="AudioStream" uid="uid://cuojj8gfcvpky" path="res://Assets/Sound/FX/success3.wav" id="11_1demg"]
+[ext_resource type="AudioStream" uid="uid://cdmih1fxf3trh" path="res://Assets/Sound/FX/failure4.wav" id="12_pisxi"]
+[ext_resource type="AudioStream" uid="uid://da2s4p35vhxfm" path="res://Assets/Sound/FX/failure5.wav" id="13_esatx"]
+[ext_resource type="AudioStream" uid="uid://ecq7p0m6v58c" path="res://Assets/Sound/FX/failure6.wav" id="14_juyaw"]
+[ext_resource type="AudioStream" uid="uid://cx0au66v55apy" path="res://Assets/Sound/FX/failure7.wav" id="15_l7nue"]
+[ext_resource type="AudioStream" uid="uid://bxtqiagw7hnak" path="res://Assets/Sound/FX/failure8.wav" id="16_4dth4"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_hp1cr")
 
 [node name="JumpSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_xt7p3")
+stream = ExtResource("2_g3lta")
 volume_db = 1.5
+pitch_scale = 2.0
 
 [node name="CoinPickup" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_31eto")
+stream = ExtResource("6_okxva")
 volume_db = 1.5
 
 [node name="DeathSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_0v7sa")
+stream = ExtResource("4_benwl")
 
 [node name="RespawnSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_7ngje")
+stream = ExtResource("6_okxva")
 
 [node name="LevelCompleteSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_okxva")
 volume_db = -2.0
 pitch_scale = 0.5
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_g3vtf")
+
+[node name="Failure1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5s01x")
+
+[node name="Failure2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_s5dvo")
+
+[node name="Failure3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_hl1my")
+
+[node name="Success1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_tjgfw")
+
+[node name="Success2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_u4xnh")
+
+[node name="Success3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_1demg")
+
+[node name="Failure4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_pisxi")
+
+[node name="Failure5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_esatx")
+
+[node name="Failure6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_juyaw")
+
+[node name="Failure7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_l7nue")
+
+[node name="Failure8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_4dth4")

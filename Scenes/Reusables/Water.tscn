@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://v56ctrx1s60g"]
+
+[ext_resource type="Texture2D" uid="uid://bo55jdd8rtw58" path="res://Assets/Spritesheet/TilesetTest.png" id="1_gibmp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j4w5s"]
+texture = ExtResource("1_gibmp")
+texture_region_size = Vector2i(8, 8)
+14:3/size_in_atlas = Vector2i(3, 3)
+14:3/animation_columns = 1
+14:3/animation_frame_0/duration = 1.0
+14:3/animation_frame_1/duration = 1.0
+14:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8ebbr"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_j4w5s")
+
+[node name="WATER" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_8ebbr")
+rendering_quadrant_size = 8
+format = 2
+layer_0/tile_data = PackedInt32Array(65537, 917504, 3)

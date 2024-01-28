@@ -36,6 +36,9 @@ func movement():
 		velocity.y += gravity
 	elif is_on_floor():
 		jump_count = max_jump_count
+		
+	if is_on_wall():
+		jump_count = max_jump_count
 	
 	handle_jumping()
 	
@@ -85,8 +88,18 @@ func death_tween():
 	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
 	await tween.finished
 	global_position = spawn_point.global_position
-	await get_tree().create_timer(0.3).timeout
-	AudioManager.respawn_sfx.play()
+	await get_tree().create_timer(0.001).timeout
+	narrator_voice()
+	GameManager.add_score()
+	respawn_tween()
+	
+# lol
+func fake_death_tween():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
+	await tween.finished
+	global_position = spawn_point.global_position
+	await get_tree().create_timer(0.001).timeout
 	respawn_tween()
 
 func respawn_tween():
@@ -98,6 +111,28 @@ func jump_tween():
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(0.7, 1.4), 0.1)
 	tween.tween_property(self, "scale", Vector2.ONE, 0.1)
+
+func narrator_voice():
+	var rng = RandomNumberGenerator.new()
+	var random_number = rng.randi_range(0, 7)
+	match random_number:
+		0:
+			AudioManager.failure1.play()
+		1:
+			AudioManager.failure2.play()
+		2:
+			AudioManager.failure3.play()
+		3:
+			AudioManager.failure4.play()
+		4:
+			AudioManager.failure5.play()
+		5:
+			AudioManager.failure6.play()
+		6:
+			AudioManager.failure7.play()
+		7:
+			AudioManager.failure8.play()   
+
 
 # --------- SIGNALS ---------- #
 
